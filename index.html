@@ -25,13 +25,16 @@
                <input type="checkbox" name="size" value="16 inch"> 16 inch<br>
                <input type="checkbox" name="size" value="20 inch"> 20 inch<br>
                </div>
+               <button type="submit" class="myButton">Add</button>
+            </form>
+            <form class="style" action="index.html" method="post">
                <div class="form-group">
                <p>Style:</p>
                 <input type="checkbox" name="style" value="Pac-Man"> Pac-Man: traditional hand tossed crust, marinara sauce, mozzerella.<br>
                 <input type="checkbox" name="style" value="Red Ghost"> Red Ghost: extra spicy! Jalepeno stuffed crust, spicy marinara sauce, mozzerella.<br>
                 <input type="checkbox" name="style" value="Ms Pac-Man"> Ms Pac-Man: Gluten free! A califlower crust, olive oil, feta cheese.<br>
                 </div>
-                 <button type="submit" class="myButton">Add toppings!</button>
+                 <button type="submit" class="myButton">Add</button>
              </form>
           </div>
           <div class="col-md-4">
@@ -53,17 +56,17 @@
                <input type="checkbox" name="toppings" value="extra mozerella cheese"> extra mozerella cheese<br>
                <input type="checkbox" name="toppings" value="extra feta cheese"> extra feta cheese<br>
                </div>
-                <button type="submit" class="total myButton">Total</button>
+                <button type="submit" class="total myButton">Submit</button>
              </form>
           </div>
-          <div class="col-md-4 delivery-cost">
-            <button type="submit" class="total myButton">Delvery</button>
-            <button type="submit" class="total myButton">Pick Up</button>
-            <p>Your total is <span class="price"></span>.</p>
+          <div class="col-md-4 pickup">
+            <button type="submit" class="deliveryclick myButton">delivery</button>
+            <button type="submit" class="pickupclick myButton">pick up</button>
           </div>
         </div>
       </div>
-      <div class="delivery-form">
+
+      <div id="delivery-form">
         <form id="delivery">
               <div class="form-group">
                 <label for="name">Name:</label>
@@ -74,11 +77,21 @@
                 <input id="address" class="form-control" type="text">
               </div>
               <div class="form-group">
-                <label for="notes">Notes for delivery:</label>
-                <input id="notes" class="form-control" type="text">
+                <label for="phone">Phone number:</label>
+                <input id="phone" class="form-control" type="text">
               </div>
-              <button type="submit" class="btn">Add!</button>
+              <button type="submit" class="done myButton">Submit</button>
             </form>
+      </div>
+      <div id="confirmation">
+        <h3>Thank you for your order.</h3>
+        <h2>Your pizza:</h2>
+        <p>Size: <span class="pizza-size"></span></p>
+        <p>Style: <span class="pizza-style"></span></p>
+        <p>Toppings: <span class="pizza-toppings"></span></p>
+        <p>Your total is: <span class="price"></span>.</p>
+        <p>Your pizza will be ready in an hour.</p>
+        <p>If you chose delivery, we are delivering to: <span class="addressto"></span></p>
       </div>
     </div>
   </body>

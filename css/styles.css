@@ -16,10 +16,10 @@ h3, p {
   font-family: 'Ubuntu', sans-serif;
 appearance: none;
 }*/
-
-.delivery-cost, .delivery-form {
+/*
+#delivery-form, #confirmation {
   display: none;
-}
+}*/
 
 
 .myButton {
