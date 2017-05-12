@@ -10,79 +10,89 @@
     <title>Pac-Man Pizza</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="jumbotron">
       <h1 class = "animated lightSpeedIn">Pac-Man Pizza</h1>
       </div>
-        <div class="ordering">
-          <h3>Choose your pizza from the following options:</h3>
-          <div class="row">
-          <div class="col-md-4">
-            <form id="pizzaChoice" action="index.html" method="post">
-              <div class="form-group">
-              <p>Size:</p>
-               <input type="checkbox" name="size" value="14 inch"> 14 inch<br>
-               <input type="checkbox" name="size" value="16 inch"> 16 inch<br>
-               <input type="checkbox" name="size" value="20 inch"> 20 inch<br>
-               </div>
-               <div class="form-group">
-               <p>Style:</p>
-                <input type="checkbox" name="style" value="Pac-Man"> Pac-Man: traditional hand tossed crust, marinara sauce, mozzerella.<br>
-                <input type="checkbox" name="style" value="Red Ghost"> Red Ghost: extra spicy! Jalepeno stuffed crust, spicy marinara sauce, mozzerella.<br>
-                <input type="checkbox" name="style" value="Ms Pac-Man"> Ms Pac-Man: Gluten free! A califlower crust, olive oil, feta cheese.<br>
+        <div class="container">
+          <form id="begin">
+            <div class="form-group begin">
+              <label for="contact">Name: </label>
+              <input type="text" class="form-control begin" id="contact" required><br>
+              <button type="submit" class="btn btn-block begin">Start Order </button>
+              <p class="lead">Start your pizza order below:</p>
+            </div>
+          </form>
+<!-- order form-->
+        <div class="panel panel-info order-form">
+          <div class="panel-heading">
+            <h2 class="panel-title"><h3 class="order-form">Order for <span id="contact"></span></h3></h2>
+          </div>
+          <div class="panel-body">
+            <form id="new-pizza">
+              <div class="form-group order-form">
+                <label for="size"><h3>Pizza Size:</h3></label><br>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Small"> 12 inch</label></div>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Medium" checked> 16 inch</label></div>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Large"> 20 inch</label></div>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Extra Large"> 24 inch</label></div>
+
+                <br><br>
+              <div class="panel-body">
+                <div class="form-group order-form">
+                  <label for="style"><h3>Pizza Style:</h3></label><br>
+                  <div class="col-md-4"><label><input type="radio" name="style" value="Pac-Man"> Classic hand-tossed crust, marinara sauce, and our cheese blend of mozerella, asiago and fontina cheese.</label></div>
+                  <div class="col-md-4"><label><input type="radio" name="style" value="Red Ghost" checked>A spicy base on hand-tossed crust, habenero sauce, and our cheese blend of mozerella, asiago and fontina cheese.</label></div>
+                  <div class="col-md-4"><label><input type="radio" name="style" value="Ms Pac-Man"> Our gluten-free califlower crust, olive oil, and our cheese blend of mozerella, asiago and fontina cheese.</label></div>
                 </div>
-          </div>
-          <div class="col-md-4">
-              <div class="form-group">
-              <p>Choose 3 toppings:</p>
-              <p><em>($1/each additional topping)</em></p>
-               <input type="checkbox" name="toppings" value="pepperoni"> pepperoni<br>
-               <input type="checkbox" name="toppings" value="sausage"> sausage<br>
-               <input type="checkbox" name="toppings" value="anchoives"> anchoives<br>
-               <input type="checkbox" name="toppings" value="olives"> olives<br>
-               <input type="checkbox" name="toppings" value="red bell peppers"> red bell peppers<br>
-               <input type="checkbox" name="toppings" value="green bell peppers"> green bell peppers<br>
-               <input type="checkbox" name="toppings" value="jalepenos"> jalepenos<br>
-               <input type="checkbox" name="toppings" value="artichokes"> artichokes<br>
-               <input type="checkbox" name="toppings" value="mushrooms"> mushrooms<br>
-               <input type="checkbox" name="toppings" value="apples"> apples<br>
-               <input type="checkbox" name="toppings" value="walnuts"> walnuts<br>
-               <input type="checkbox" name="toppings" value="extra mozerella cheese"> extra mozerella cheese<br>
-               <input type="checkbox" name="toppings" value="extra feta cheese"> extra feta cheese<br>
-               </div>
-                <button type="submit" class="total">Submit</button>
-             </form>
-             <input type="button" name="answer" value="Delivery" onclick="showDiv()" />
-          </div>
-            <div id="receipt">
-              <span id="confirmation">
-                    <span class="pizza-size"></span>
-                    <span class="pizza-style"></span>
-                    <span class="pizza-toppings"></span>
-                    <span class="price"></span>
-              </span>
-              <span id="deliveryConfirm">
-               <span class="addressto"></span>
-              </span>
+              </div>
+                <div class="row">
+                <div class="panel-body">
+                  <label for="toppings"><h3>Toppings:</h3></label><br>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Pepperoni"> Pepperoni</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Sausage"> Sausage</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Canadian Bacon"> Canadian Bacon</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Pineapple"> Pineapple</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Jalepenos"> Jalepenos</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Mushrooms"> Mushrooms</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Green Bell Peppers"> Green Bell Peppers</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Artichoke"> Artichokes</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Apples"> Apples</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Walnuts"> Walnuts</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Arugula"> Apples</label></div>
+                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Prosciutto"> Prosciutto</label></div>
+                </div>
+              </div>
+            </div>
+          <button type="submit" class="btn btn-block">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+      <div class="final">
+        <h1>Thanks for your order!</h1>
+      </div>
+<!-- summary-->
+      <div class="panel panel-info summary order">
+        <div class="panel-heading summary order">
+          <h3 class="prompt panel-heading summary order">Current Order:</h3>
+        </div>
+        <div class="panel-body summary order">
+          <h3><span id="contact" class="summary"></span></h3>
+          <ul id="orderlist" class="summary"></ul>
+          <h3 class="final">Total: $<span id="cost"></span>.00</h3>
+        </div>
+        <br>
+
+      <a class="btn btn-lg prompt" id="addmore" role="button">Add Another Pizza</a>
+      <a class="btn btn-lg prompt" id="checkout" role="button">Review and Order</a>
+    </div>
+<!-- checkout -->
+          <div class="order finalprompt">
+            <h3>Final cost: $<span id="cost"></span>.00</h3><br>
+            <a class="btn btn-lg finalprompt" id="submit" role="button">Submit</a>
+            <a class="btn btn-lg finalprompt" id="back" role="button">Go Back</a>
           </div>
         </div>
-      </div>
-      <div id="delivery-form">
-        <form id="delivery">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input id="name" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="address">Address:</label>
-            <input id="address" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone number:</label>
-            <input id="phone" class="form-control" type="number">
-          </div>
-          <button type="submit" class="confirm">Submit</button>
-        </form>
       </div>
     </div>
   </body>

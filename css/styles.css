@@ -4,14 +4,19 @@ h1 {
 
 h3, p {
   font-family: 'Ubuntu', sans-serif;
+}
 
+label {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 120%;
+  margin: 5px;
+}
+
+.checkout-screen, .final, .order, .order-form, .summary {
+  display: none;
 }
 
 .jumbotron {
-  background-color: #21295C;
-    color: #EBEE01;
+  color: yellow;
+  background-color: black;
 }
-
-/*#deliveryConfirm, #delivery-form, #confirmation {
-  display: none;
-}*/

@@ -1,46 +1,104 @@
-//business logic
-// function for clearing document
-function showDiv() {
- document.getElementById('hidden').style.display = "block";
+function Pizza(size, style, toppings, cost){
+  this.size = size
+  this.style = style
+  this.toppings = []
+  this.cost = 0
 }
 
-//user interface logic
+Pizza.prototype.addTopping = function(topping){
+  (this.toppings).push(topping);
+}
+
+Pizza.prototype.findCost = function(){
+  if (this.size == "Small"){
+    this.cost += 10;
+  } else if (this.size == "Medium"){
+    this.cost += 14;
+  } else if (this.size == "Large"){
+    this.cost += 16;
+  } else if (this.size == "Extra Large"){
+    this.cost += 18;
+  }
+  this.cost += (this.toppings.length);
+  return this.cost;
+}
+
+function Topping(name, cost){
+  this.name = name
+  this.cost = 1
+}
+
+function Order(name, pizzas, total){
+  this.pizzas = [];
+  this.total = 0;
+  this.name = name;
+}
+
+Order.prototype.add = function(pizza){
+  (this.pizzas).push(pizza);
+}
+
+Order.prototype.checkout = function(){
+  var totalCost = this.total;
+  (this.pizzas).forEach(function(pizza){
+    totalCost = totalCost + (pizza.cost);
+  });
+  return totalCost;
+}
+
 $(document).ready(function(){
-  $("form#pizzaChoice").submit(function(event){
+  $("form#begin").submit(function(event){
     event.preventDefault();
-    $("input:checkbox[name=size]:checked").each(function(){
-      var size = $(this).val();
-      $('.pizza-size').append("<h3>Thank you for your order.</h3>" + "<h2>Your pizza:</h2>"
-+ "<p>Size: " + size +"</p>");
-      });
-    $("input:checkbox[name=style]:checked").each(function(){
-      var style = $(this).val();
-      $('.pizza-style').append("<p>Style: " + style +"</p>");
-      });
+    var orderName = $("input#contact").val();
+    var newOrder = new Order(orderName);
+    $(".begin").hide();
+    $(".order-form").show();
+    $("span#contact").text(orderName);
+
+  $("form#new-pizza").submit(function(event){
+    event.preventDefault();
+    var size = $("input[name=size]:checked").val();
+    var newPizza = new Pizza(size);
+    var style = $("input[name=style]:checked").val();
     $("input:checkbox[name=toppings]:checked").each(function(){
-      var toppings = $(this).val();
-      $('.pizza-toppings').append("<p>Style: " + toppings + " " + "</p>");
+      var topping = $(this).val();
+      newPizza.addTopping(topping);
     });
 
-    $("#pizzaChoice").click(function() {
-      $("#confirmation").show();
-    });
+    newOrder.add(newPizza);
+
+    $(".order-form").hide();
+    $(".summary").show();
+    $("span#username").text(orderName + "'s Order:");
+    $("ul#orderlist").append("<li>" + newPizza.size + " " + style + " pizza with: Cheese, " + newPizza.toppings.join(', ') + "  -  $" + newPizza.findCost() + "</li>");
   });
 
-  $("form#delivery").submit(function(event) {
-    event.preventDefault();
+  $("#addmore").click(function(){
+    $(".order-form").show();
+    $(".summary").hide();
+  });
 
-    var inputtedName = $("input#name").val();
-    var inputtedAddress = $("input#address").val();
-    var inputtedPhone = $("input#phone").val();
-    $(".addressto").append("<p>We are delivering to: " + inputtedName + " " + inputtedAddress + " " + inputtedPhone);
+  $("#checkout").click(function(){
+    $(".checkout-screen").show();
+    $(".prompt").hide();
+    $(".order").show();
+    $("span#cost").text(newOrder.checkout());
+  });
 
-    $("#delivery-form").click(function() {
-      $("#deliveryConfirm").show();
+  $("#submit").click(function(){
+    $(".final").show();
+    $(".checkout-screen").hide();
+    $(".order").hide();
+    $(".finalprompt").hide();
+    $(".checkout-screen").hide();
+  })
+
+  $("#back").click(function(){
+    $(".prompt").show();
+    $(".final").hide();
+    $(".checkout-screen").show();
+    $(".finalprompt").hide();
+    $("span#cost").text(newOrder.checkout());
     });
-
-    $("input#name").val("");
-    $("input#address").val("");
-    $("input#phone").val("");
   });
 });
