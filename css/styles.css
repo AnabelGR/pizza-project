@@ -12,11 +12,6 @@ h3, p {
     color: #EBEE01;
 }
 
-/*input[type="checkbox"] {
-  font-family: 'Ubuntu', sans-serif;
-appearance: none;
-}*/
-
-#deliveryConfirm, #hidden {
+/*#deliveryConfirm, #delivery-form, #confirmation {
   display: none;
-}
+}*/

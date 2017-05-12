@@ -18,27 +18,21 @@
           <h3>Choose your pizza from the following options:</h3>
           <div class="row">
           <div class="col-md-4">
-            <form class="size" action="index.html" method="post">
+            <form id="pizzaChoice" action="index.html" method="post">
               <div class="form-group">
               <p>Size:</p>
                <input type="checkbox" name="size" value="14 inch"> 14 inch<br>
                <input type="checkbox" name="size" value="16 inch"> 16 inch<br>
                <input type="checkbox" name="size" value="20 inch"> 20 inch<br>
                </div>
-               <button type="submit">Add</button>
-            </form>
-            <form class="style" action="index.html" method="post">
                <div class="form-group">
                <p>Style:</p>
                 <input type="checkbox" name="style" value="Pac-Man"> Pac-Man: traditional hand tossed crust, marinara sauce, mozzerella.<br>
                 <input type="checkbox" name="style" value="Red Ghost"> Red Ghost: extra spicy! Jalepeno stuffed crust, spicy marinara sauce, mozzerella.<br>
                 <input type="checkbox" name="style" value="Ms Pac-Man"> Ms Pac-Man: Gluten free! A califlower crust, olive oil, feta cheese.<br>
                 </div>
-                 <button type="submit">Add</button>
-             </form>
           </div>
           <div class="col-md-4">
-            <form class="toppings" action="index.html" method="post">
               <div class="form-group">
               <p>Choose 3 toppings:</p>
               <p><em>($1/each additional topping)</em></p>
@@ -58,44 +52,37 @@
                </div>
                 <button type="submit" class="total">Submit</button>
              </form>
+             <input type="button" name="answer" value="Delivery" onclick="showDiv()" />
           </div>
-          <div class="col-md-4 pickup">
-            <input type="button" name="answer" value="Delivery" onclick="showDiv()" />
+            <div id="receipt">
+              <span id="confirmation">
+                    <span class="pizza-size"></span>
+                    <span class="pizza-style"></span>
+                    <span class="pizza-toppings"></span>
+                    <span class="price"></span>
+              </span>
+              <span id="deliveryConfirm">
+               <span class="addressto"></span>
+              </span>
           </div>
         </div>
       </div>
-
-      <div id="hidden">
-        <div id="delivery-form">
-          <form id="delivery">
-                <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input id="name" class="form-control" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="address">Address:</label>
-                  <input id="address" class="form-control" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone number:</label>
-                  <input id="phone" class="form-control" type="text">
-                </div>
-                <button type="submit" class="done">Submit</button>
-              </form>
-        </div>
-        <div id="receipt">
-          <span id="confirmation">
-          <h3>Thank you for your order.</h3>
-          <h2>Your pizza:</h2>
-          <p>Size: <span class="pizza-size"></span></p>
-          <p>Style: <span class="pizza-style"></span></p>
-          <p>Toppings: <span class="pizza-toppings"></span></p>
-          <p>Your total is: <span class="price"></span>.</p>
-          <p>Your pizza will be ready in an hour.</p>
-          <span id="deliveryConfirm">
-          <p>We are delivering to: <span class="addressto"></span></p>
-        </span>
-        </div>
+      <div id="delivery-form">
+        <form id="delivery">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input id="address" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number:</label>
+            <input id="phone" class="form-control" type="number">
+          </div>
+          <button type="submit" class="confirm">Submit</button>
+        </form>
       </div>
     </div>
   </body>
