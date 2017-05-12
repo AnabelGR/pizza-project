@@ -1,3 +1,7 @@
+body {
+  background-color: #748F11;
+}
+
 h1 {
   font-family: 'Luckiest Guy', cursive;
 }
@@ -18,10 +22,23 @@ label {
 
 .jumbotron {
   color: yellow;
-  background-color: black;
+  background-image: url("header.jpg");
 }
 
 .topping {
   font-family: 'Ubuntu', sans-serif;
 
+}
+
+.btn-block, .btn-lg {
+  background-color: #20265A;
+  color: yellow;
+}
+
+.panel {
+  background: #DE685D;
+}
+
+.panel-title {
+  background: #CC9B08;
 }
