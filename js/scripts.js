@@ -1,6 +1,8 @@
 //business logic
 // function for clearing document
-
+function showDiv() {
+ document.getElementById('hidden').style.display = "block";
+}
 
 //user interface logic
 $(document).ready(function(){
@@ -38,11 +40,12 @@ $(document).ready(function(){
     $(".addressto").append(" " + inputtedName + " " + inputtedAddress + " " + inputtedPhone);
 
     $("#delivery-form").click(function() {
-      $("#confirmation").show();
+      $("#deliveryConfirm").show();
     });
 
-    $("input#nname").val("");
+    $("input#name").val("");
     $("input#address").val("");
     $("input#phone").val("");
   });
+
 });
