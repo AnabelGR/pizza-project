@@ -2,7 +2,7 @@ h1 {
   font-family: 'Luckiest Guy', cursive;
 }
 
-h3, p {
+h2, h3, li, p {
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -19,4 +19,9 @@ label {
 .jumbotron {
   color: yellow;
   background-color: black;
+}
+
+.topping {
+  font-family: 'Ubuntu', sans-serif;
+
 }
