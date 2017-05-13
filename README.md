@@ -10,9 +10,12 @@ This web page will allow a user to order a pizza.
 
 |  behavior | input  | output  |
 |---|---|---|
+| Allow a user to choose a size for the pizza they'd like to order.  | "12 inch"  |  "small" |
+| Allow a user to choose a style for the pizza they'd like to order.  | "Pac-Man"  |  "Pac-Man" |
 | Allow a user to choose toppings for the pizza they'd like to order.  | "pepperoni" "olives"  |  "pepperoni" "olives" |
-| Allow a user to choose a size for the pizza they'd like to order.  | "14 inch"  |  "14 inch" |
-| Allow a user to see the total cost for the pizza.  | $15 |  $15 |
+| Allow a user to see the total cost for the pizza.  | $10 |  $10 |
+| Allow a user to add another pizza to their order.  | "add another pizza"  |  {return to order page} |
+
 
 
 ## Gh-pages

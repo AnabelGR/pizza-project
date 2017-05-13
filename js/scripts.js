@@ -5,24 +5,6 @@ function Pizza(size, style, toppings, cost){
   this.cost = 0
 }
 
-Pizza.prototype.addTopping = function(topping){
-  (this.toppings).push(topping);
-}
-
-Pizza.prototype.findCost = function(){
-  if (this.size == "Small"){
-    this.cost += 10;
-  } else if (this.size == "Medium"){
-    this.cost += 14;
-  } else if (this.size == "Large"){
-    this.cost += 16;
-  } else if (this.size == "Extra Large"){
-    this.cost += 18;
-  }
-  this.cost += (this.toppings.length);
-  return this.cost;
-}
-
 function Topping(name, cost){
   this.name = name
   this.cost = 1
@@ -44,6 +26,24 @@ Order.prototype.checkout = function(){
     totalCost = totalCost + (pizza.cost);
   });
   return totalCost;
+}
+
+Pizza.prototype.addTopping = function(topping){
+  (this.toppings).push(topping);
+}
+
+Pizza.prototype.findCost = function(){
+  if (this.size == "Small"){
+    this.cost += 10;
+  } else if (this.size == "Medium"){
+    this.cost += 14;
+  } else if (this.size == "Large"){
+    this.cost += 16;
+  } else if (this.size == "Extra Large"){
+    this.cost += 18;
+  }
+  this.cost += (this.toppings.length);
+  return this.cost;
 }
 
 $(document).ready(function(){
