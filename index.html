@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="jumbotron">
+      <div class="jumbotron"  style="background-image: url(img/header.jpg); background-size: cover">
       <h1 class = "animated lightSpeedIn">Pac-Man Pizza</h1>
       </div>
         <div class="container">
@@ -32,11 +32,10 @@
             <form id="new-pizza">
               <div class="form-group order-form">
                 <label for="size"><h3>Pizza Size:</h3></label><br>
-                <div class="col-md-3"><label><input type="radio" name="size" value="Small"> 12 inch</label></div>
-                <div class="col-md-3"><label><input type="radio" name="size" value="Medium"> 16 inch</label></div>
-                <div class="col-md-3"><label><input type="radio" name="size" value="Large"> 20 inch</label></div>
-                <div class="col-md-3"><label><input type="radio" name="size" value="Extra Large"> 24 inch</label></div>
-
+                <div class="col-md-3"><label><input type="radio" name="size" value="Small"><span class="radio">12 inch</span></label></div>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Medium"><span class="radio">16 inch</span></label></div>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Large"><span class="radio">20 inch</span></label></div>
+                <div class="col-md-3"><label><input type="radio" name="size" value="Extra Large"> <span class="radio">24 inch</span></label></div>
                 <br><br>
               <div class="panel-body">
                 <div class="form-group order-form">
@@ -49,22 +48,22 @@
                 <div class="row">
                 <div class="panel-body">
                   <label for="toppings"><h3>Toppings:</h3></label><br>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Pepperoni"> Pepperoni</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Sausage"> Sausage</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Canadian Bacon"> Canadian Bacon</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Pineapple"> Pineapple</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Jalepenos"> Jalepenos</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Mushrooms"> Mushrooms</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Green Bell Peppers"> Green Bell Peppers</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Artichoke"> Artichokes</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Apples"> Apples</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Walnuts"> Walnuts</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Arugula"> Apples</label></div>
-                  <div class="col-md-3"><label><input type="checkbox" class="topping" name="toppings" value="Prosciutto"> Prosciutto</label></div>
+                  <div class="col-md-3"><label for="top01"><input type="checkbox" class="topping" id="top01" name="toppings" value="Pepperoni"> <span class="checkbox">Pepperoni</span></label></div>
+                  <div class="col-md-3"><label for="top02"><input type="checkbox" class="topping" id="top02" name="toppings" value="Sausage"> <span class="checkbox">Sausage</span></label></div>
+                  <div class="col-md-3"><label for="top03"><input type="checkbox" class="topping" id="top03" name="toppings" value="Canadian Bacon"> <span class="checkbox">Canadian Bacon</span></label></div>
+                  <div class="col-md-3"><label for="top04"><input type="checkbox" class="topping" id="top04" name="toppings" value="Pineapple"> <span class="checkbox">Pineapple</span></label></div>
+                  <div class="col-md-3"><label for="top05"><input type="checkbox" class="topping" id="top05" name="toppings" value="Jalepenos"> <span class="checkbox">Jalepeños</span></label></div>
+                  <div class="col-md-3"><label for="top06"><input type="checkbox" class="topping" id="top06" name="toppings" value="Mushrooms"> <span class="checkbox">Mushrooms</span></label></div>
+                  <div class="col-md-3"><label for="top07"><input type="checkbox" class="topping" id="top07" name="toppings" value="Green Bell Peppers"> <span class="checkbox">Green Bell Peppers</span></label></div>
+                  <div class="col-md-3"><label for="top08"><input type="checkbox" class="topping" id="top08" name="toppings" value="Artichoke"> <span class="checkbox">Artichokes</span></label></div>
+                  <div class="col-md-3"><label for="top09"><input type="checkbox" class="topping" id="top09" name="toppings" value="Apples"> <span class="checkbox">Apples</span></label></div>
+                  <div class="col-md-3"><label for="top10"><input type="checkbox" class="topping" id="top10" name="toppings" value="Walnuts"> <span class="checkbox">Walnuts</span></label></div>
+                  <div class="col-md-3"><label for="top11"><input type="checkbox" class="topping" id="top11" name="toppings" value="Arugula"> <span class="checkbox">Arugula</span></label></div>
+                  <div class="col-md-3"><label for="top12"><input type="checkbox" class="topping" for="top12" name="toppings" value="Prosciutto"><span class="checkbox">Prosciutto</span></label></div>
                 </div>
               </div>
+                <button type="submit" class="btn btn-block">Add to Cart</button>
             </div>
-          <button type="submit" class="btn btn-block">Add to Cart</button>
         </form>
       </div>
     </div>
@@ -79,11 +78,9 @@
           <h3 class="final">Total: $<span id="cost"></span>.00</h3>
         </div>
         <br>
-
-      <a class="btn btn-lg prompt" id="addmore" role="button">Add Another Pizza</a>
-      <a class="btn btn-lg prompt" id="checkout" role="button">Review and Order</a>
-    </div>
-<!-- checkout -->
+        <a class="btn btn-lg prompt" id="addmore" role="button">Add Another Pizza</a>
+        <a class="btn btn-lg prompt" id="checkout" role="button">Review and Order</a>
+      </div>
           <div class="order finalprompt">
             <h3>Final cost: $<span id="cost"></span>.00</h3><br>
             <a class="btn btn-lg finalprompt" id="submit" role="button">Submit</a>

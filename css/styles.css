@@ -22,7 +22,6 @@ label {
 
 .jumbotron {
   color: yellow;
-  background-image: url("header.jpg");
 }
 
 .topping {
@@ -36,9 +35,10 @@ label {
 }
 
 .panel {
-  background: #DE685D;
+  background: yellow;
 }
 
-.panel-title {
-  background: #CC9B08;
+.panel-heading {
+  background-color: #20265A;
+  color: yellow;
 }
