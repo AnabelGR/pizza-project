@@ -1,19 +1,23 @@
 body {
   background-color: #748F11;
+    backface-visibility: hidden;
 }
 
 h1 {
   font-family: 'Luckiest Guy', cursive;
 }
 
-h2, h3, li, p {
+h2, h3, label, li, p {
   font-family: 'Ubuntu', sans-serif;
 }
 
 label {
-  font-family: 'Ubuntu', sans-serif;
   font-size: 120%;
-  margin: 5px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 150%;
 }
 
 .checkout-screen, .final, .order, .order-form, .summary {
@@ -22,6 +26,7 @@ label {
 
 .jumbotron {
   color: yellow;
+  border: 4px solid yellow;
 }
 
 .topping {
@@ -41,4 +46,71 @@ label {
 .panel-heading {
   background-color: #20265A;
   color: yellow;
+}
+
+.price {
+  background-color: #20265A;
+  color: yellow;
+}
+
+
+.begin {
+  width: 400px;
+  color: yellow;
+}
+
+#contact {
+  color: #20265A;
+}
+
+
+input[type="radio"] {
+  appearance: none;
+  margin: 0 20px;
+  width: 24px;
+  height: 24px;
+  background: #eeeeee;
+  box-shadow: inset 0 0 0 .4em white, 0 0 0 .3em;
+  border-radius: 50%;
+  transition: .2s;
+  cursor: pointer;
+  color: #363945;
+  &:hover,
+  &:checked {
+    background: #363945;
+    box-shadow: inset 0 0 0 .6em white, 0 0 0 .3em;
+  }
+  &:checked {
+    background: #56be8e;
+    box-shadow: inset 0 0 0 .4em white, 0 0 0 .3em #56be8e;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  margin: 0 20px;
+  width: 24px;
+  height: 24px;
+  background: #eeeeee;
+  box-shadow: inset 0 0 0 .4em white, 0 0 0 .3em;
+  border-radius: 50%;
+  transition: .2s;
+  cursor: pointer;
+  color: #363945;
+  &:hover,
+  &:checked {
+    background: #363945;
+    box-shadow: inset 0 0 0 .6em white, 0 0 0 .3em;
+  }
+  &:checked {
+    background: #56be8e;
+    box-shadow: inset 0 0 0 .4em white, 0 0 0 .3em #56be8e;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
