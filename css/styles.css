@@ -11,6 +11,11 @@ h2, h3, label, li, p {
   font-family: 'Ubuntu', sans-serif;
 }
 
+hr { width:100%;
+  height:1px;
+  background: #20265A;
+}
+
 label {
   font-size: 120%;
 }
@@ -49,7 +54,6 @@ li {
 }
 
 .price {
-  background-color: #20265A;
   color: yellow;
 }
 
@@ -59,10 +63,14 @@ li {
   color: yellow;
 }
 
+.finalprompt, .final {
+  text-align: center;
+  color: yellow;
+}
+
 #contact {
   color: #20265A;
 }
-
 
 input[type="radio"] {
   appearance: none;
