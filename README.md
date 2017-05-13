@@ -17,7 +17,7 @@ This web page will allow a user to order a pizza.
 
 ## Gh-pages
 
-https://github.com/AnabelGR/pizza-project
+https://github.com/AnabelGR/pizza-project/tree/gh-pages
 
 ## Setup/Installation Requirements
 
